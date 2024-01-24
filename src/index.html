@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Decodificador</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          class="container__img"
+          src="./assets/logo.svg"
+          alt="Logo da aplicação: Uma letra A grande"
+        />
+      </header>
+      <div class="main__content__wrapper">
+        <div>
+          <textarea
+            id="input__textarea"
+            placeholder="Digite seu texto"
+          ></textarea>
+
+          <div class="btn__group">
+            <div class="img_wrapper">
+              <img src="./assets/icon_question.svg" alt="Ícone de ajuda" />
+              <span>Apenas letras minúsculas e sem acento.</span>
+            </div>
+            <div class="action__buttons">
+              <button
+                id="botaoCriptografar"
+                class="criptButton"
+                onclick="criptografar()"
+              >
+                Criptografar
+              </button>
+              <button id="botaoDescriptografar" onclick="descriptografar()">
+                Descriptografar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="content__wrapper">
+          <div id="content__response">
+            <div id="content__message">
+              <img
+                src="./assets/not_found.svg"
+                alt="Imagem de uma mulher ajoelhada olhando um diamante com uma lupa"
+              />
+              <div>
+                <h2>Nenhuma mensagem encontrada</h2>
+                <p>
+                  Digite um texto que você deseja criptografar ou
+                  descriptografar.
+                </p>
+              </div>
+            </div>
+
+            <textarea disabled id="resposta__criptografada"></textarea>
+          </div>
+          <button id="botaoCopiar" onclick="copiarTexto()">Copiar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
